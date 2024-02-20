@@ -70,4 +70,10 @@ stdenv.mkDerivation rec {
 
     chmod +x $out/bin/slex
   '';
+
+  meta = with lib; {
+    description = "A SLASH'EM fork";
+    homepage = "https://github.com/SLASHEM-Extended/SLASHEM-Extended";
+    platforms = platforms.linux;
+  };
 }
