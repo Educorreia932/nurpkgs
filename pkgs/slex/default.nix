@@ -30,7 +30,7 @@ stdenv.mkDerivation {
   postInstall = ''
     mkdir -p $out/slex-2.9.0/slexuserdir
 
-    for i in xlogfile logfile perm record livelog; do
+    for i in xlogfile logfile perm record livelog save; do
       mv $out/slex-2.9.0/$i $out/slex-2.9.0/slexuserdir
     done
 
