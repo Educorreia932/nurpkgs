@@ -5,14 +5,14 @@ let
   userDir = "~/.config/slex";
   binPath = lib.makeBinPath [ coreutils less ];
 in
-stdenv.mkDerivation {
+stdenv.mkDerivation rec {
   pname = "slex";
   version = "2.9.0";
   src = fetchFromGitHub {
     owner = "SLASHEM-Extended";
     repo = "SLASHEM-Extended";
-    rev = "slex-2.9.0";
-    sha256 = "sha256-QVLHULUy+Wu3dkLfeLsVoqSYPV18p/ffbBrTb++5SV4=";
+    rev = "slex-${version}";
+    sha256 = "sha256-uJHJh62cs0MFsusrTCvxGL4SQayc/kfYcWaoe0CaaRs=";
     leaveDotGit = true;
   };
   hardeningDisable = [ "all" ];
